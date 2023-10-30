@@ -1,0 +1,189 @@
+:root {
+    --red-clr: #E75935;
+    --blue-clr: #005A72;
+    --white-clr: #F9F1E4;
+    --yellow-clr: #EBB730;
+}
+
+@font-face {
+    font-family: 'reviera';
+    src: url('../fonts/reviera.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #78d769;
+    font-family: 'reviera';
+}
+
+.hello-page {
+    background-image: url('../img/ekb-back.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    font-size: 3.6em;
+    color: #fff;
+    margin-left: 60px;
+    text-decoration: none;
+    transition: 3s linear;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.h {
+    font-size: 5.6em;
+}
+
+#landmark {
+    background-color: var(--blue-clr);
+    margin-top: 220px;
+    margin-left: 30px;
+    text-align: center;
+    width: 50%;
+}
+
+#ekb {
+    background-color: var(--red-clr);
+    margin-top: 50px;
+    margin-left: 60%;
+    width: 30%;
+    text-align: center;
+}
+
+.walking {
+    height: 100vh;
+    background-color: var(--yellow-clr);
+}
+
+.walking-container {
+    display: flex;
+    padding-top: 50px
+}
+
+.walking-text {
+    margin-left: 150px;
+    font-size: 10.6em;
+    color: var(--white-clr);
+}
+
+.statue {
+    margin-left: 30px;
+}
+
+#here {
+    margin-top: 150px;
+    margin-left: 150px;
+}
+
+.best {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--red-clr);
+    color: var(--yellow-clr);
+    font-size: 6.6em;
+    align-items: center;
+}
+
+.best img {
+    margin-top: 100px;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    font-size: 7.6em;
+}
+
+.ch-mu {
+    display: flex;
+}
+
+.church {
+    width: 50%;
+    padding: 30px;
+    background-color: var(--blue-clr);
+    color: var(--red-clr);
+}
+
+.church a {
+    color: var(--red-clr);
+    text-decoration: none;
+    transition: color 0.3s linear;
+}
+
+.church a:hover {
+    color: #ba482b;
+}
+
+.museum {
+    width: 50%;
+    padding: 30px;
+    background-color: var(--white-clr);
+    color: var(--yellow-clr);
+}
+
+.museum a {
+    color: var(--yellow-clr);
+    text-decoration: none;
+    transition: color 0.3s linear;
+}
+
+.museum a:hover {
+    color: #bb9126;
+}
+
+.theater {
+    padding: 30px;
+    background-color: var(--red-clr);
+    text-align: center;
+    color: var(--white-clr)
+}
+
+.theater a {
+    color: var(--white-clr);
+    text-decoration: none;
+    transition: color 0.3s linear;
+}
+
+.theater a:hover {
+    color: #c7c1b7;
+}
+
+.other {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white-clr);
+}
+
+.other a {
+    margin-top: 100px;
+    color: var(--blue-clr);
+    font-size: 10.6em;
+    text-decoration: none;
+    transition: color 0.3s linear;
+}
+
+.other a:hover {
+    color: #002934;
+}
+
+.other img {
+    margin-bottom: 30px;
+}

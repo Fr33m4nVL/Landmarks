@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <title>Достопримечательности</title>
+</head>
+<body>
+    <section class="hello-page">
+        <nav>
+            <a href="{% url 'landmarks' %}">Места</a>
+            <a href="{% url 'excursions' %}">Экскурсии</a>
+        </nav>
+        <p class="h" id="landmark">Достопримечательности</p>
+        <p class="h" id="ekb">Екатеринбурга</p>
+    </section>
+
+    <section class="walking">
+        <div class="walking-container">
+            <img class="statue" src="{% static 'img/statue.svg' %}" alt="statue">
+            <div class="walking-text">
+                <p>Как же хочется</p>
+                <p id="here">Здесь погулять</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="best">
+        <img src="{% static 'img/flower_2.svg' %}" alt="">
+        <p>А вот и наши лучшие места</p>
+        <img src="{% static 'img/flower.svg' %}" alt="">
+    </section>
+
+    <section class="top">
+        <div class="ch-mu">
+            <div class="church">
+                <p>#1</p>
+                <a href="#">Храм на крови</a>
+            </div>
+            <div class="museum">
+                <p>#2</p>
+                <a href="#">Музей истории Екатеринбурга</a>
+            </div>
+        </div>
+        <div class="theater">
+            <p>#3</p>
+            <a href="#">Театр оперы и балета</a>
+        </div>
+    </section>
+
+    <section class="other">
+        <a href="{% url 'landmarks' %}">Хочу посмотреть всё</a>
+        <img src="{% static 'img/stepa.svg' %}" alt="">
+    </section>
+</body>
+</html>

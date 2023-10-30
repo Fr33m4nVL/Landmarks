@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ landmark.title }}</title>
+    <link rel="stylesheet" href="{% static 'css/landmark.css' %}">
+    <script src="https://api-maps.yandex.ru/v3/?apikey=e87aa55e-4b0e-45bb-854c-5d0613702418&lang=ru_RU"></script>
+    <script>
+        initMap();
+
+        async function initMap() {
+            await ymaps3.ready;
+
+            const {YMap, YMapDefaultSchemeLayer} = ymaps3;
+            const coordinate_1 = '{{ landmark.coordinate_1 }}'
+            const coordinate_2 = '{{ landmark.coordinate_2 }}'
+
+            const map = new YMap(
+                document.getElementById('map'),
+                {
+                    location: {
+                        center: [coordinate_1, coordinate_2],
+                        zoom: 16
+                    }
+                }
+            );
+
+            map.addChild(new YMapDefaultSchemeLayer());
+        }
+    </script>
+</head>
+<body>
+    <div class="landmark-detail-container">
+        <p class="ld-title">{{ landmark.title }}</p> 
+        <div class="landmark-detail">
+                <img src="{{ landmark.preview.url }}" alt="">
+                <div class="landmark-info">
+                    <p>{{ landmark.inspiration }}</p>
+                    <p>{{ landmark.description }}</p>
+                </div>
+        </div>
+        <div id="map"></div>
+        <a id="back" href="{% url 'landmarks' %}">
+            <button>Назад</button>
+        </a>
+    </div>
+</body>
+</html>

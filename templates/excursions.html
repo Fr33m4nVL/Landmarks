@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/excr.css' %}">
+</head>
+<body>
+    <div class="ex-list">
+        {% for ex in object_list %}
+            <ul>
+                <li id="title">{{ ex.title }}</li>
+                <li>{{ ex.cost }} Р.</li>
+                <li>{{ ex.number }}</li>
+                <li>{{ ex.description }}</li>
+            </ul>
+        {% endfor %} 
+    </div>
+
+    <a id="back" href="{% url 'home' %}">
+        <button>На главную</button>
+    </a>
+</body>
+</html>
